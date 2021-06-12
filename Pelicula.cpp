@@ -1,24 +1,39 @@
 #include "Pelicula.h"
 
-Pelicula::Pelicula()
-{
-    ID = "p";
-    nombre = "d";
-    duracion=0.0;
-    genero="f";
-    calificacion=0;
+#include <iostream>
+#include <string>
+#include <cmath>
+using namespace std;
+
+//Constructores
+//Constructor por default
+Pelicula::Pelicula(){
+  this -> ID = 0;
+  this -> nombre = "Desconocido";
+  this -> duracion = 0;
+  this -> genero = "Desconocido";
+  this -> calificacion = 0.0;
 }
 
-Pelicula::Pelicula(string I, string nom, float du, string gen,float cal):Video(I,  nom,  du,  gen){
-  calificacion=cal;
+//Constructor con parámetros
+Pelicula::Pelicula(int I, string nom, int du, string gen){
+  this -> ID = I;
+  this -> nombre = nom;
+  this -> duracion = du;
+  this -> genero = gen;
+  this -> calificacion = 0.0;
 }
 
-void Pelicula::EvaluacionPelicula(){
-  cout<<"Pelicula: "<<endl;
-  cout<<"ID: "<<ID<<endl;
-  cout<<"nombre: "<<nombre<<endl;
-  cout<<"duracion: "<<duracion<<endl;
-  cout<<"genero: "<<genero<<endl;
-  cout<<"calificacion: "<<calificacion<<endl;
+//Métodos
+void Pelicula::evaluar(float cal){
+  this -> calificacion = cal;
+}
+
+void Pelicula::mostrar(){
+  cout << "Pelicula: " << nombre << endl;
+  cout << "ID: " << ID << endl;
+  cout << "Duracion: " << duracion <<endl;
+  cout << "Genero: " << genero << endl;
+  cout << "Calificacion: " << calificacion << endl;
 }
 
