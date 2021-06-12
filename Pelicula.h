@@ -1,21 +1,22 @@
 #ifndef PELICULA_H
 #define PELICULA_H
 
+#include "Video.h" //Herencia de Video
+
 #include <iostream>
 #include <string>
-#include "Video.h"
+#include <cmath>
 using namespace std;
 
 class Pelicula: public Video {
 
   public:
-    float calificacion;
-  public:
     //Constructores
-  Pelicula();
-  Pelicula(string, string, float, string,float);
-  void EvaluacionPelicula();
+    Pelicula();
+    Pelicula(int, string, int, string);
 
+    //Métodos
+    void evaluar(float);
+    void mostrar();
 };
-
-#endif
+#endif // PELICULA_H
