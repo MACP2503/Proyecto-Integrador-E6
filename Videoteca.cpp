@@ -60,6 +60,7 @@ void Videoteca::operator+(Serie s){
   }
 }
 
+//Sobrecarga de operadores
 void Videoteca::buscar(int id){
   bool encuentra = false;
   for(int i=0; i < (this -> npeliculas); i++){
