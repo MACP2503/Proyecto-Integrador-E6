@@ -18,11 +18,11 @@ Serie::Serie(){
 }
 
 //Constructor con parametros
-Serie::Serie(int I, string nom, int du, string gen, Temporada * temporadas, int ntemporadas){
-  this -> ID = I;
+Serie::Serie(int I, string nom, int du, string gen, Temporada * temporadas, int ntemporadas): Video(I, nom, du, gen){
+  /*this -> ID = I;
   this -> nombre = nom;
   this -> duracion= du;
-  this -> genero = gen;
+  this -> genero = gen;*/
   this -> calificacion = 0;
   this -> temporadas = temporadas;
   this -> ntemporadas = ntemporadas;
