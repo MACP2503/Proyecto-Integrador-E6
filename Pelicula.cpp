@@ -16,11 +16,11 @@ Pelicula::Pelicula(){
 }
 
 //Constructor con parámetros
-Pelicula::Pelicula(int I, string nom, int du, string gen){
-  this -> ID = I;
+Pelicula::Pelicula(int I, string nom, int du, string gen): Video(I, nom, du, gen){
+  /*this -> ID = I;
   this -> nombre = nom;
   this -> duracion = du;
-  this -> genero = gen;
+  this -> genero = gen;*/
   this -> calificacion = 0.0;
 }
 
